@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="todo.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+</head>
+<body>
+  <input type="text" placeholder="Enter new to-do">
+  <p><input type="text" placeholder="Enter category" list="categoryList"></p>
+  <datalist id="categoryList">
+    <option value="Personal"></option>
+    <option value="Work"></option>
+  </datalist>
+  <p><input type="date" id="dateInput"></p>
+  <p><input type="time" id="timeInput"></p>
+  <button id="addBtn">Add</button>
+  <p><button id="sortBtn">Sort</button></p>
+  <ul></ul>
+  <table id="todoTable">
+    <tr>
+      <td></td>
+      <td>Date</td>
+      <td>Time</td>
+      <td>to-do</td>
+      <td>
+        <select id="categoryFilter">
+        </select>
+      </td>
+      <td></td>
+    </tr>
+  </table>
+  <script src="todo.js"></script>
+</body>
+</html>
