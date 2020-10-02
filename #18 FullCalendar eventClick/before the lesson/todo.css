@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Rowdies&family=Titillium+Web&display=swap');
+
+.strike {
+  text-decoration: line-through;
+}
+
+td{
+  border: 1px solid black;
+  padding: 5px;
+}
+
+.todo-input{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 1rem;
+}
+
+#todoTable{
+  margin-top: 1rem;
+}
+
+::-ms-input-placeholder{
+  color: #ed6a5e;
+}
+
+::-webkit-input-placeholder{
+  color: #ed6a5e;
+}
+
+::placeholder{
+  color: #ed6a5e;
+}
+
+input {
+  color:#a11e12;
+}
+
+h3 {
+  color:#a11e12;
+  font-family: 'Rowdies', cursive;
+}
+
+
+body{
+
+  font-family: 'Titillium Web', sans-serif;
+}
+
+.todo-block{
+  border: 1px solid #ff8e72;
+  padding: 1rem;
+  border-radius: 20px;
+  color: #a11e12;
+}
+
+@media screen and (max-width: 767px) {
+  /* for mobile or small screen device */
+  #todoTable, .todo-calendar{
+    margin-top: 1rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  /* for tablets or laptops or desktops */
+  .todo-grid-parent{
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    column-gap: 1rem;
+  }
+
+  #calendar{
+    position: sticky;
+    top: 0;
+  }
+}
+
+.todo-overlay{
+  width: 100vw;
+  height: 100vh;
+  background-color: #ddd;
+  position: fixed;
+  top: 0;
+  left: 0;
+  opacity: 0.9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateX(-100vw);
+  transition: transform 250ms;
+  z-index: 2;
+}
+
+.todo-modal{
+  min-width: 50vw;
+  height: 50vh;
+  /*border: 1px solid green;*/
+  background-color: #ffd6cc;
+}
+
+.todo-modal-close-btn{
+  background-color: red;
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  color: white;
+  font-weight: bold;
+}
+
+.slidedIntoView {
+  transform: translateX(0);
+  transition: transform 650ms;
+}
