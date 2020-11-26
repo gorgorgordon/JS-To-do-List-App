@@ -10,14 +10,7 @@
         center: 'title',
         right: 'dayGridMonth,timeGridWeek,timeGridDay'
       },
-      events: [{
-          title: "Visit Gordon's YouTube Channel",
-          start: "2020-11-26",
-        },{
-          title: "Visit Gordon's YouTube Channel Everyday!",
-          start: "2020-11-27",
-        },
-      ],
+      events: [],
     });
 
     calendar.render();</script>
