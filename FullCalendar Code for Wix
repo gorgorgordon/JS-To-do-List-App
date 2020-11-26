@@ -1,0 +1,39 @@
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fullcalendar@5.1.0/main.min.css">
+<script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.1.0/main.min.js"></script>
+<div id="calendar"></div>
+<script>var calendarEl = document.getElementById('calendar');
+
+    calendar = new FullCalendar.Calendar(calendarEl, {
+      initialView: 'dayGridMonth',
+      initialDate: new Date(), //'2020-07-07',
+      headerToolbar: {
+        left: 'prev,next today',
+        center: 'title',
+        right: 'dayGridMonth,timeGridWeek,timeGridDay'
+      },
+      events: [{
+          title: "Visit Gordon's YouTube Channel",
+          start: "2020-11-26",
+        },{
+          title: "Visit Gordon's YouTube Channel Everyday!",
+          start: "2020-11-27",
+        },
+      ],
+      eventClick: function (info) {
+        toEditItem(info.event);
+      },
+      eventBackgroundColor: "#a11e12",
+      eventBorderColor: "#ed6a5e",
+      editable: true,
+      eventDrop: function (info) {
+        calendarEventDragged(info.event);
+      },
+      eventTimeFormat: {
+        hour: 'numeric',
+        minute: '2-digit',
+        omitZeroMinute: false,
+        hour12: false
+      }
+    });
+
+    calendar.render();</script>
