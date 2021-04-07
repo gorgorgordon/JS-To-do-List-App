@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--https://www.youtube.com/watch?v=qmL5FWHLlQU-->
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gordon's To-do List</title>
+  <meta name="description" content="Help managing daily activities. Be organized.">
+  <link rel="stylesheet" href="todo.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fullcalendar@5.4.0/main.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.4.0/main.min.js"></script>
+  
+<!--
+  <link rel="stylesheet" href="./fullcalendar/main.min.css">
+  <script src="./fullcalendar/main.min.js" defer></script>
+-->
+  <script src="todo.js" defer></script>
+</head>
+
+<body>
+  <h3>Gordon's To-do List</h3>
+  <div class="todo-grid-parent">
+
+    <div>
+      <div class="todo-input todo-block">
+        <span>To-do: </span>
+        <input type="text" placeholder="Enter new to-do">
+        <span>Category: </span>
+        <input type="text" placeholder="Enter category" list="categoryList">
+        <datalist id="categoryList">
+          <option value="Personal"></option>
+          <option value="Work"></option>
+        </datalist>
+        <span>Date:</span>
+        <input type="date" id="dateInput">
+        <span>Time:</span>
+        <input type="time" id="timeInput">
+        <span></span>
+        <button id="addBtn">Add</button>
+        <span></span>
+        <button id="sortBtn">Sort by Date</button>
+        <span></span>
+        <label><input type="checkbox" id="shortlistBtn"> Incomplete First </label>
+
+      </div>
+
+      <div class="todo-block todoTable-block">
+        <div class="itemsPerPage">
+          <span>items per page</span>
+          <select id="itemsPerPageSelectElem">
+            <option>5</option>
+            <option>10</option>
+            <option>20</option>
+          </select>
+        </div>
+
+        <table id="todoTable">
+          <tr>
+            <td></td>
+            <td>Date</td>
+            <td>Time</td>
+            <td>to-do</td>
+            <td>
+              <select id="categoryFilter">
+              </select>
+            </td>
+            <td></td>
+          </tr>
+        </table>
+
+        <div class="pagination-pages">
+          
+        </div>
+      </div>
+    </div>
+
+    <div class="todo-calendar  todo-block">
+      <div id='calendar'></div>
+    </div>
+
+  </div> <!-- class="todo-grid-parent" -->
+
+  <div class="todo-overlay" id="todo-overlay">
+    <div class="todo-modal" id="todo-modal">
+      <div class="todo-input todo-block">
+        <span>To-do: </span>
+        <input type="text" placeholder="Enter new to-do" id="todo-edit-todo">
+        <span>Category: </span>
+        <input type="text" placeholder="Enter category" list="categoryList" id="todo-edit-category">
+        <datalist id="categoryList">
+          <option value="Personal"></option>
+          <option value="Work"></option>
+        </datalist>
+        <span>Date:</span>
+        <input type="date" id="todo-edit-date">
+        <span>Time:</span>
+        <input type="time" id="todo-edit-time">
+        <span></span>
+        <button id="changeBtn">Save Change</button>
+      </div>
+    </div>
+    <div class="todo-modal-close-btn" id="todo-modal-close-btn">X</div>
+  </div>
+
+</body>
+
+</html>
