@@ -6,3 +6,4 @@ Video Tutorials available at https://www.youtube.com/playlist?list=PLkqwj9vc20pU
 
 [lesson 18 FullCalendar eventClick](https://youtu.be/Un5DrBn5gxc) https://youtu.be/Un5DrBn5gxc
 
+[lesson 26 url of FullCalendar](https://youtu.be/Wps_77icD4k)
